@@ -1,0 +1,36 @@
+{
+  "name": "reviews-al",
+  "version": "1.0.0",
+  "description": "Ratings and reviews UI module for the team's Google Express Product Page clone.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghrsea-express/reviews-AL.git"
+  },
+  "keywords": [],
+  "author": "Adrienne Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghrsea-express/reviews-AL/issues"
+  },
+  "homepage": "https://github.com/ghrsea-express/reviews-AL#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  }
+}
