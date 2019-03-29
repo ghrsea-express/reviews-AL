@@ -1,6 +1,6 @@
 const reviews = require('./reviews.json');
 const moment = require('moment');
-console.log(reviews.length);
+
 const randomNumberGenerator = (min, max) => {
     return min + Math.floor( Math.random() * (max + 1 - min) )
 };
