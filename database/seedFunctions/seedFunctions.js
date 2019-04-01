@@ -12,6 +12,7 @@ const randomDate = (start, end) => {
 for (var review of reviews) {
     review.rating = randomNumberGenerator(1,5);
     review.created_at = moment(randomDate(new Date(2010,0,1), new Date())).format('YYYY-MM-DD');
+    review.helpful_score = randomNumberGenerator(0,500);
     review.product_id = randomNumberGenerator(1,100);
     review.user_id = randomNumberGenerator(1,100);
 };

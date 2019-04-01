@@ -6,6 +6,8 @@ exports.up = function(knex, Promise) {
         table.string("title");
         table.string("text_body");
         table.date("created_at");
+        table.string("store_name");
+        table.integer("helpful_score");
         table.integer("user_id")
             .notNullable()
             .references("id")

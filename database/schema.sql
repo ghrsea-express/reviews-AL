@@ -20,6 +20,8 @@ CREATE TABLE reviews (
     rating INT CHECK (rating > 0 AND rating <= 5),
     title VARCHAR(100),
     text_body VARCHAR(500),
+    store_name VARCHAR(100),
+    helpful_score INT DEFAULT 0 NOT NULL,
     created_at DATE NOT NULL,
     product_id INT NOT NULL,
     user_id INT NOT NULL,
