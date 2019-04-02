@@ -1,0 +1,112 @@
+/*************** general ***************/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 10px 20px;
+}   
+
+hr {
+    border-top: dotted rgb(207, 204, 204) 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*********** reviews summary ***********/
+.title-summary {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.container-summary {
+    margin: 10px;
+    padding: 10px 0px;
+    
+}
+.container-stats-chart {
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: middle;
+    align-content: centre;
+}
+
+/* summary stats */
+.summary-stats {
+    border: dotted rgb(207, 204, 204) 1px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle; 
+}
+
+/* summary chart */
+.summary-chart {
+    border: dotted rgb(207, 204, 204) 1px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/************* top reviews *************/
+.container-top-reviews {
+    border: solid rgb(197, 194, 194) 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.vs-circle {
+    border: solid rgb(197, 194, 194) 1px;
+    border-radius: 50%;
+    padding: 5px;
+    color: grey;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-grow: 0;
+}
+
+.review {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/************ reviews feed *************/
+.container-feed {
+    margin: 10px;
+    padding: 10px 0px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.review-body {
+    line-height: 0%;
+}
+
+.review-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.review-date {
+    color: rgb(148, 148, 148);
+    margin-left: 10px;
+}
+
+.review-store {
+    color: rgb(148, 148, 148);
+}
+
+.review-user-photo {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.review-name {
+    vertical-align: middle; 
+}
