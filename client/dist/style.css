@@ -39,7 +39,7 @@ hr {
 /* summary stats */
 .summary-stats {
     width: 200px;
-    height: 200px;
+    height: 150px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -61,14 +61,25 @@ hr {
 }
 
 /* summary chart */
-.summary-chart {
-    border: dotted rgb(207, 204, 204) 1px;
+.container-summary-chart {
     width: 400px;
-    height: 200px;
-    text-align: center;
+    height: 150px;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.container-bar {
+    border: dotted pink 1px;
+    margin: 5px 0px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: rgb(4, 146, 241);
+}
+
+.bar-percentage {
+    font-weight: 300;
 }
 
 /************* top reviews *************/
