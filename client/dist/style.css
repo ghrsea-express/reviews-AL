@@ -2,7 +2,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    margin: 10px 20px;
+    width: 85%;
+    margin: auto;
+    text-align: center;
 }   
 
 hr {
@@ -14,6 +16,7 @@ hr {
 .title-summary {
     font-size: 25px;
     font-weight: 400;
+    text-align: left;
 }
 
 .container-summary {
@@ -24,26 +27,43 @@ hr {
 .container-stats-chart {
     display: flex;
     justify-content: flex-start;
-    vertical-align: middle;
-    align-content: centre;
+    align-items: center;
+
 }
 
 /* summary stats */
 .summary-stats {
-    border: dotted rgb(207, 204, 204) 1px;
     width: 200px;
     height: 200px;
     text-align: center;
-    vertical-align: middle; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.average-rating {
+    font-size: 45px;
+}
+
+.all-reviews {
+    color: rgb(4, 146, 241);
+    text-decoration: none;
+}
+
+.all-reviews:hover {
+    text-decoration: underline;
 }
 
 /* summary chart */
 .summary-chart {
     border: dotted rgb(207, 204, 204) 1px;
-    width: 300px;
+    width: 400px;
     height: 200px;
     text-align: center;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /************* top reviews *************/
@@ -56,28 +76,42 @@ hr {
     justify-content: center;
 }
 
+.container-vs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 20px;
+    background: linear-gradient(rgb(197, 194, 194), rgb(197, 194, 194)) no-repeat center/1px 100%;
+}
+
 .vs-circle {
     border: solid rgb(197, 194, 194) 1px;
     border-radius: 50%;
     padding: 5px;
     color: grey;
-    font-size: 12px;
-    margin-left: 10px;
-    margin-right: 10px;
-    flex-grow: 0;
+    font-size: 14px;
+    background-color: white;
 }
 
 .review {
-    flex-grow: 1;
-    text-align: center;
+    width: 500px;
+    line-height: 2;
+    text-align: left;
+    font-size: 14px;
+}
+
+.top-review {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 /************ reviews feed *************/
 .container-feed {
-    margin: 10px;
+    margin: 15px;
     padding: 10px 0px;
     font-size: 14px;
     line-height: 2;
+    text-align: left;
 }
 
 .no-bullet {

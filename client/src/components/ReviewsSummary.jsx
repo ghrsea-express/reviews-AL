@@ -11,9 +11,9 @@ const ReviewsSummary = ({ reviews }) => {
             <h2 className="title-summary">Reviews Summary</h2>
             <div className="container-stats-chart">
                 <div className="summary-stats">
-                    <div className="average-rating">{averageRating}</div>
-                    <div className="stars">Stars: {Math.round(averageRating)}</div>
-                    <div className="other-reviews" href="#">{`${reviews.length} reviews`}</div>
+                    <div className="average-rating">{averageRating}</div> 
+                    <div className="stars">Stars: {Math.round(averageRating)}</div> 
+                    <div><a className="all-reviews" href="#">{`${reviews.length} reviews`}</a></div>
                 </div>
                 <div className="summary-chart">
                     <div>Summary chart</div>

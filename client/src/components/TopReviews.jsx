@@ -5,14 +5,14 @@ const TopReviews = ({positiveReviews, criticalReviews}) => {
     return (
         <div className="container-top-reviews">
             <div className="review">
-                Top Positive Review
+                <span className="top-review">Top Positive Review</span>
                 < TopPositiveReview review={positiveReviews[0]} /> 
             </div>
-            <div>
-                <span className="vs-circle">VS</span>
+            <div className="container-vs">
+                <div className="vs-circle">VS</div>
             </div>
             <div className="review">
-                Top Critical Review
+                <span className="top-review">Top Critical Review</span>
                 < TopCriticalReview review={criticalReviews[0]} />
             </div>
         </div>
@@ -22,7 +22,7 @@ const TopReviews = ({positiveReviews, criticalReviews}) => {
 const TopPositiveReview = ({review}) => {
     return (
         <div>
-            <img src={review.thumbnail_url} className="review-user-photo" /><span className="review-name"> {review.name}</span><br />
+            {/* <img src={review.thumbnail_url} className="review-user-photo" /><span className="review-name"> {review.name}</span><br /> */}
             <span className="review-title">{review.title}</span><br/>
             <span>Stars: {review.rating} </span>
             <span className="review-date"> {moment(review.created_at).format('MMMM D, YYYY')}</span><br />
@@ -35,7 +35,7 @@ const TopPositiveReview = ({review}) => {
 const TopCriticalReview = ({review}) => {
     return (
         <div>
-            <img src={review.thumbnail_url} className="review-user-photo" /><span className="review-name"> {review.name}</span><br />
+            {/* <img src={review.thumbnail_url} className="review-user-photo" /><span className="review-name"> {review.name}</span><br /> */}
             <span className="review-title">{review.title}</span><br/>
             <span>Stars: {review.rating} </span>
             <span className="review-date"> {moment(review.created_at).format('MMMM D, YYYY')}</span><br />
