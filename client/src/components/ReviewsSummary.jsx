@@ -1,4 +1,5 @@
 import React from 'react';
+import getStars from '../../utils/getStars.js';
 
 const ReviewsSummary = ({ reviews }) => {
     let averageRating = 0;
@@ -12,7 +13,7 @@ const ReviewsSummary = ({ reviews }) => {
             <div className="container-stats-chart">
                 <div className="summary-stats">
                     <div className="average-rating">{averageRating}</div> 
-                    <div className="stars">Stars: {Math.round(averageRating)}</div> 
+                    <span className="star-rating">{getStars(Math.round(averageRating))}</span> 
                     <div><a className="all-reviews" href="#">{`${reviews.length} reviews`}</a></div>
                 </div>
                 <div className="summary-chart">

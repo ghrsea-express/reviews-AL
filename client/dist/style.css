@@ -12,6 +12,11 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.star-rating {
+    color: rgb(255, 208, 0);
+}
+
 /*********** reviews summary ***********/
 .title-summary {
     font-size: 25px;
