@@ -34,15 +34,15 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-
   render() {
-    const positiveReviews = this.getPositiveReviews(this.state.productReviews);
-    const criticalReviews = this.getCriticalReviews(this.state.productReviews);
+    const { productReviews } = this.state;
+    const positiveReviews = this.getPositiveReviews(productReviews);
+    const criticalReviews = this.getCriticalReviews(productReviews);
     return (
       <div>
-        <ReviewsSummary reviews={this.state.productReviews} />
+        <ReviewsSummary reviews={productReviews} />
         <TopReviews positiveReviews={positiveReviews} criticalReviews={criticalReviews} />
-        <ReviewsFeed reviews={this.state.productReviews} />
+        <ReviewsFeed reviews={productReviews} />
       </div>
     );
   }
