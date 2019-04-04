@@ -7,7 +7,7 @@ const TopReviews = ({positiveReviews, criticalReviews}) => {
         <div className="container-top-reviews">
             <div className="review">
                 <span className="top-review">Top Positive Review</span>
-                < TopPositiveReview review={positiveReviews[0]} />
+                { positiveReviews.length && <TopPositiveReview review={positiveReviews[0]} />}
                 <span className="all-reviews">{`See all ${positiveReviews.length} positive reviews`}</span> 
             </div>
             <div className="container-vs">
@@ -15,12 +15,16 @@ const TopReviews = ({positiveReviews, criticalReviews}) => {
             </div>
             <div className="review">
                 <span className="top-review">Top Critical Review</span>
-                < TopCriticalReview review={criticalReviews[0]} />
+                {criticalReviews.length && <TopCriticalReview review={criticalReviews[0]} />}
                 <span className="all-reviews">{`See all ${criticalReviews.length} critical reviews`}</span>
             </div>
         </div>
     )
 };
+
+// const defaultReview = {
+// }
+// pass this in as props {review: defaultReview}
 
 const TopPositiveReview = ({review}) => {
     return (

@@ -71,7 +71,6 @@ hr {
 }
 
 .container-bar {
-    border: dotted pink 1px;
     margin: 5px 0px;
     padding-left: 20px;
     font-weight: 400;
@@ -80,8 +79,12 @@ hr {
 
 .bar-percentage {
     font-weight: 300;
+    font-size: 15px;
 }
 
+.bar {
+    margin: 0px 10px;
+}
 /************* top reviews *************/
 .container-top-reviews {
     border: solid rgb(197, 194, 194) 1px;
