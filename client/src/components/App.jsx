@@ -6,46 +6,46 @@ import TopReviews from './TopReviews.jsx';
 import ReviewsFeed from './ReviewsFeed.jsx';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            productID: 21,
-            productReviews: [],
-        };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      productID: 21,
+      productReviews: [],
     };
+  }
 
-    getPositiveReviews(reviews) {
-        return reviews.filter(review => review.rating > 3)
-    };
+  componentDidMount() {
+    this.getReviews();
+  }
 
-    getCriticalReviews(reviews) {
-        return reviews.filter(review => review.rating < 3)
-    };
+  getPositiveReviews(reviews) {
+    return reviews.filter(review => review.rating > 3);
+  }
 
-    getReviews() {
-        axios.get(`/reviews/${this.state.productID}`)
-        .then((response) => {
-            this.setState({ productReviews: response.data })
-        })
-        .catch((err) => console.log(err))
-    };
+  getCriticalReviews(reviews) {
+    return reviews.filter(review => review.rating < 3);
+  }
 
-    componentDidMount() {
-        this.getReviews();
-    };
+  getReviews() {
+    axios.get(`/reviews/${this.state.productID}`)
+      .then((response) => {
+        this.setState({ productReviews: response.data });
+      })
+      .catch(err => console.log(err));
+  }
 
-    render() {
-        const positiveReviews = this.getPositiveReviews(this.state.productReviews);
-        const criticalReviews = this.getCriticalReviews(this.state.productReviews);
-        return (
-            <div>
-                < ReviewsSummary reviews={this.state.productReviews} />
-                < TopReviews positiveReviews={positiveReviews} criticalReviews={criticalReviews} />
-                < ReviewsFeed reviews={this.state.productReviews} />
-            </div>
-        )
-    };
-};
+
+  render() {
+    const positiveReviews = this.getPositiveReviews(this.state.productReviews);
+    const criticalReviews = this.getCriticalReviews(this.state.productReviews);
+    return (
+      <div>
+        <ReviewsSummary reviews={this.state.productReviews} />
+        <TopReviews positiveReviews={positiveReviews} criticalReviews={criticalReviews} />
+        <ReviewsFeed reviews={this.state.productReviews} />
+      </div>
+    );
+  }
+}
 
 export default App;
