@@ -12,6 +12,7 @@ exports.up = function(knex, Promise) {
             .notNullable()
             .references("id")
             .inTable("users")
+            .onDelete("cascade")
             .index();
         table.integer("product_id")
             .notNullable()
