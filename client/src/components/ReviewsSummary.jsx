@@ -22,17 +22,16 @@ const ReviewsSummary = ({ reviews }) => {
                         {ratings.map((rating) => {
                             return (
                                 <div className="container-bar" key={rating}>
-                                    <span>{rating}  </span>
+                                    <span>{rating}</span>
                                     <span className="bar">
                                         <svg width='150px' height='14px'>
                                             <g className='bar'>
-                                                <rect fill='rgb(235, 235, 235)' width='100%' height='100%'></rect>;
-                                                <rect fill='rgb(255, 208, 0)' width={getPercentage(reviews,rating)} height='100%'></rect>
+                                                <rect fill='rgb(235, 235, 235)' width='100%' height='100%' rx='8' ry='8'></rect>;
+                                                <rect fill='rgb(255, 208, 0)' width={getPercentage(reviews,rating)} height='100%' rx='8' ry='8'></rect>
                                             </g>
                                         </svg>
                                     </span>
-                                    <span className="bar-percentage">  {getPercentage(reviews,rating)}</span>
-                                    
+                                    <span className="bar-percentage">{getPercentage(reviews,rating)}</span>
                                 </div>
                             )
                         })}
