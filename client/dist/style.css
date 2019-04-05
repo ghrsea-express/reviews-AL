@@ -125,16 +125,12 @@ hr {
 }
 
 /************ reviews feed *************/
-.container-feed {
+.feed {
     margin: 15px;
     padding: 10px 0px;
     font-size: 14px;
     line-height: 2;
     text-align: left;
-}
-
-.no-bullet {
-    list-style-type: none;
 }
 
 .review-body {
