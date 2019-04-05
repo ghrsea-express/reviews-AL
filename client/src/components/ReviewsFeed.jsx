@@ -9,7 +9,7 @@ const ReviewsFeed = ({ reviews }) => {
                     <div key={review.id}>
                         <img src={review.thumbnail_url} className="review-user-photo" /><span className="review-name"> {review.name}</span>
                         <Review review={review} key={review.id}/>
-                        <hr />
+                        <hr className="horizontal-line" />
                     </div>
                     )
                 })
