@@ -29,11 +29,11 @@ hr {
     padding: 10px 0px;
     
 }
+
 .container-stats-chart {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 /* summary stats */
@@ -61,8 +61,7 @@ hr {
 }
 
 /* summary chart */
-.container-summary-chart {
-    width: 400px;
+.ratings-chart {
     height: 150px;
     text-align: left;
     display: flex;
