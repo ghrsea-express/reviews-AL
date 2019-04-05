@@ -1,20 +1,20 @@
 import React from 'react';
 import getStars from '../../utils/getStars.js';
 
-const ReviewsSummary = ({ reviews }) => {
+const ReviewsSummary = ({reviews, updateReviews}) => {
     return (
         <div className="container-summary">
             <hr />
             <h2 className="title-summary">Reviews Summary</h2>
             <div className="container-stats-chart">
-                <SummaryStats reviews={reviews} />
+                <SummaryStats reviews={reviews} updateReviews={updateReviews} />
                 <SummaryChart reviews={reviews} />
             </div>
         </div>
     );
 }
 
-const SummaryStats = ({reviews}) =>  {
+const SummaryStats = ({reviews, updateReviews}) =>  {
     let averageRating = 0;
     if (reviews.length) {
         averageRating = getAverageRating(reviews)
@@ -23,7 +23,7 @@ const SummaryStats = ({reviews}) =>  {
         <div className="summary-stats">
             <div className="average-rating">{averageRating}</div> 
             <span className="star-rating">{getStars(Math.round(averageRating))}</span> 
-            <div><a className="all-reviews" href="#">{`${reviews.length} reviews`}</a></div>
+            <div><a className="all-reviews" href="#" onClick={(e) => {updateReviews(reviews)}}>{`${reviews.length} reviews`}</a></div>
         </div>
     );
 }

@@ -11,7 +11,9 @@ class App extends Component {
     this.state = {
       productID: 21,
       productReviews: [],
+      reviewsToRender: []
     };
+    this.updateReviews = this.updateReviews.bind(this);
   }
 
   componentDidMount() {
@@ -29,26 +31,29 @@ class App extends Component {
   getReviews() {
     axios.get(`/reviews/${this.state.productID}`)
       .then((response) => {
-        this.setState({ productReviews: response.data });
+        this.setState({ 
+            productReviews: response.data,
+            reviewsToRender: response.data.slice(0,3) 
+        });
       })
       .catch(err => console.log(err));
   }
 
   updateReviews(reviews) {
     this.setState({
-      productReviews: reviews
+      reviewsToRender: reviews
     });
   }
 
   render() {
-    const { productReviews } = this.state;
+    const { productReviews, reviewsToRender } = this.state;
     const positiveReviews = this.getPositiveReviews(productReviews);
     const criticalReviews = this.getCriticalReviews(productReviews);
     return (
       <div>
         <ReviewsSummary reviews={productReviews} updateReviews={this.updateReviews} />
         <TopReviews positiveReviews={positiveReviews} criticalReviews={criticalReviews} updateReviews={this.updateReviews} />
-        <ReviewsFeed reviews={productReviews} />
+        <ReviewsFeed reviews={reviewsToRender} />
       </div>
     );
   }
