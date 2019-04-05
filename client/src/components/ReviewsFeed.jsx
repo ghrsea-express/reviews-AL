@@ -3,12 +3,18 @@ import Review from './Review.jsx';
 
 const ReviewsFeed = ({ reviews }) => {
     return (
-        <ul className="container-feed no-bullet">
+        <div className="feed">
             {reviews.map((review) => {
-                return <Review review={review} key={review.id}/>
+                return (
+                    <div key={review.id}>
+                        <img src={review.thumbnail_url} className="review-user-photo" /><span className="review-name"> {review.name}</span>
+                        <Review review={review} key={review.id}/>
+                        <hr />
+                    </div>
+                    )
                 })
             }
-        </ul>
+        </div>
     );
 }
 
