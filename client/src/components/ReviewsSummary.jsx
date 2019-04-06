@@ -4,7 +4,7 @@ import getStars from '../../utils/getStars.js';
 const ReviewsSummary = ({reviews, updateReviews}) => {
     return (
         <div className="container-summary">
-            <hr />
+            <hr className="horizontal-line" />
             <h2 className="title-summary">Reviews Summary</h2>
             <div className="container-stats-chart">
                 <SummaryStats reviews={reviews} updateReviews={updateReviews} />

@@ -4,6 +4,7 @@ import axios from 'axios';
 import ReviewsSummary from './ReviewsSummary.jsx';
 import TopReviews from './TopReviews.jsx';
 import ReviewsFeed from './ReviewsFeed.jsx';
+import styles from './style.css';
 
 class App extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class App extends Component {
     const positiveReviews = this.getPositiveReviews(productReviews);
     const criticalReviews = this.getCriticalReviews(productReviews);
     return (
-      <div>
+      <div className="review-module-body">
         <ReviewsSummary reviews={productReviews} updateReviews={this.updateReviews} />
         <TopReviews positiveReviews={positiveReviews} criticalReviews={criticalReviews} updateReviews={this.updateReviews} />
         <ReviewsFeed reviews={reviewsToRender} />
