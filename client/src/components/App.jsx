@@ -4,7 +4,7 @@ import axios from 'axios';
 import ReviewsSummary from './ReviewsSummary.jsx';
 import TopReviews from './TopReviews.jsx';
 import ReviewsFeed from './ReviewsFeed.jsx';
-import styles from './style.css';
+import './style.css';
 
 class App extends Component {
   constructor(props) {
