@@ -29,6 +29,7 @@ module.exports = {
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
     
+    //allow css modules
     moduleNameMapper: {
       "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
     },
