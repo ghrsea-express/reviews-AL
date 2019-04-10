@@ -28,4 +28,5 @@ describe('Review component renders individual reviews as expected', () => {
         expect(wrapper.childAt(7).text()).toEqual(`Reviewed on ${testReview.store_name}`);
         expect(wrapper.childAt(7).hasClass('review-store')).toEqual(true);
     });
-}); 
+});
+ 
