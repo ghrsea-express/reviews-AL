@@ -11,7 +11,7 @@ Ratings and reviews UI module for the team's Google Express Product Page clone.
 
 ## Stretch Goals
 - [X] Add user name & profile photo
-- [ ] Create new review functionality
+
 
 
 
