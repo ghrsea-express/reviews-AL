@@ -18,6 +18,7 @@ exports.up = function(knex, Promise) {
             .notNullable()
             .references("id")
             .inTable("products")
+            .onDelete("cascade")
             .index();
     })
 };
