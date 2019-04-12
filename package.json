@@ -4,7 +4,7 @@
   "description": "Ratings and reviews UI module for the team's Google Express Product Page clone.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
     "knex": "knex",
     "test": "jest",
@@ -49,7 +49,6 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "ajv": "^6.10.0",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "body-parser": "^1.18.3",
@@ -57,6 +56,7 @@
     "faker": "^4.1.0",
     "knex": "^0.16.3",
     "moment": "^2.24.0",
+    "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "path": "^0.12.7",
     "react": "^16.8.5",
