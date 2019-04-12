@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productID: 21,
+      productID: (window.location.pathname).match(/\d+/),
       productReviews: [],
       reviewsToRender: []
     };
@@ -33,8 +33,8 @@ class App extends Component {
     axios.get(`/reviews/${this.state.productID}`)
       .then((response) => {
         this.setState({ 
-            productReviews: response.data,
-            reviewsToRender: response.data.slice(0,3) 
+          productReviews: response.data,
+          reviewsToRender: response.data.slice(0,3) 
         });
       })
       .catch(err => console.log(err));
