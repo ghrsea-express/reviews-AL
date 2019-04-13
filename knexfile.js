@@ -5,8 +5,10 @@ module.exports = {
         client: 'mysql',
         connection: {
             user: 'root',
-            host: '127.0.0.1',
-            database: 'reviews_module'
+            host: 'database',
+            database: 'reviews_module',
+            password: 'testpw',
+            port: 3306 
         },
         migrations: {
             directory: path.join(__dirname, 'database', 'migrations')
