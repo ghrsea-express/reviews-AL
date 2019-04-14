@@ -1,13 +1,15 @@
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path')
+const path = require('path');
+const compression = require('compression');
 
 const knex = require('../database/connection');
 
 const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(compression())
 
 app.use(express.static(__dirname + '/../client/dist'));
 

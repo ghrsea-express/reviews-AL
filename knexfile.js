@@ -8,7 +8,7 @@ module.exports = {
             host: 'database',
             database: 'reviews_module',
             password: 'testpw',
-            port: 3306 
+            port: 3306
         },
         migrations: {
             directory: path.join(__dirname, 'database', 'migrations')
