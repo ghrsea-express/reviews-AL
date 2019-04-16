@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+
+.babelrc
+enzyme.config.js
+jest.config.js
+webpack.config.js
+
+exampleData.js
+
+test
+coverage
