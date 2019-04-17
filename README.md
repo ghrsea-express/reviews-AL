@@ -12,6 +12,6 @@ Ratings and reviews UI module for the team's Google Express Product Page clone.
 ## Stretch Goals
 - [X] Add user name & profile photo
 
-
+For more information, check out the [Wiki page](https://github.com/ghrsea-express/reviews-AL/wiki).
 
 
